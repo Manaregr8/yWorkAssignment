@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Manjeet's chatter</title>
+        <script src="https://kit.fontawesome.com/c1c192c5e8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <img src="./logo.PNG" alt="Logo">
+            <span class="ProfileDp">MS</span>
+        </nav>
+        <div class="innercontainer">
+            <div class="sideInnerContainer">
+                <div class="heading"><h2>Chats</h2></div>
+                <div class="profiles" id="profilesContainer">
+                </div>
+            </div>
+            <div class="mainContainer" >
+                <button id="backBtn" class="backBtn">← Back</button>
+                <div class="profile" id="mainProfile">
+                        <div class="ProfilesDp" id="mainDp">
+                            <span>ET</span>
+                        </div>
+                        <div class="profileData">
+                            <h3 id="mainName">Emma Thompson</h3>
+                            <p class="lastActive" id="mainStatus">Online</p>
+                        </div>
+                </div>
+                <div class="chats" id="chatBox"></div>
+                <div class="messageSpace">
+    <input type="text" id="messageInput" placeholder="Type a message...">
+    <button type="submit" id="sendBtn">Send</button>
+</div>
+
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+</html>

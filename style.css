@@ -1,0 +1,291 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box  ;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+body{
+    height: 100vh;
+    width: 100%;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+nav {
+  flex-shrink: 0;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px solid rgb(240, 240, 240);
+  color: #333;
+}
+
+.innercontainer {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+nav img{
+    width: 390px;
+    height: 50px;
+}
+.sideInnerContainer {
+    width: 100%;
+    max-width: 400px;
+    height: 100%;
+    border-right: 3px solid rgb(240, 240, 240);
+    display: flex;
+    flex-direction: column;
+}
+
+.profiles {
+    flex: 1;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.profiles::-webkit-scrollbar {
+    display: none;
+}
+.heading{
+padding: 1rem 2rem;
+border-bottom:3px solid rgb(240, 240, 240)  ;
+    color: #333;
+}
+.profilesCard{
+    padding: 1rem 1rem 1rem 1rem;
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.profileCard{
+    width: 100%;
+    padding: 1rem 1rem 1rem 2rem;
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.ProfilesDp{
+    width: 60px;
+    height:60px;
+    border-radius: 50%;
+    margin: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.ProfileDp{
+    width: 60px;
+    height:60px;
+    border-radius: 50%;
+    background:linear-gradient(45deg, orange, red, yellow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.profileData{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+}
+.profileInfo{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #585858;
+}
+.profilelastMessage{
+    margin-top: 2px;
+    width: 100%;
+    max-width: 280px;
+    font-size: 15px;
+      white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.lastActive{
+    font-size: 15px;
+}
+.mainContainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.profile{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    align-items: center;
+    padding: 1rem 2rem;
+    flex-shrink: 0;
+    border-bottom: 3px solid rgb(240, 240, 240)  ;
+}
+.chats{
+    flex: 1;
+    width: 100%;
+    height: 100%;
+}
+.messageSpace{
+    width: 100%;
+    height: 80px;
+    flex-shrink: 0;
+    padding: 1rem 2rem;
+    display: flex;
+    border-top: 3px solid rgb(240, 240, 240)  ;
+}
+.messageSpace input{
+    padding: 10px 20px;
+    flex: 1;
+    width: 100%;
+    height: 100%;
+}
+.messageSpace button{
+    flex-shrink: 0;
+    padding: 1rem 2rem;
+cursor: pointer;
+    margin-left: 10px;
+}
+.activebutton {
+    border-left: 5px solid orange;
+}
+.myMessage,
+.aiMessage {
+    display: inline-block;
+    word-wrap: break-word;
+    padding: 8px 12px;
+    margin: 5px 0;
+    max-width: 80%;
+}
+
+.myMessage {
+    background-color: #ffe985;
+    align-self: flex-end;
+    text-align: right;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.aiMessage {
+    background-color: #eeeeee;
+    align-self: flex-start;
+    text-align: left;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.chats {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem;
+    overflow-y: auto;
+}
+@media (max-width: 763px) {
+    .sideInnerContainer {
+    max-width: 100%;
+}
+    .mainContainer {
+        position: fixed;
+        top: 0;
+        left: 100%;
+        width: 100%;
+        height: 100%;
+        background: white;
+        transition: left 0.3s ease;
+        z-index: 10;
+    }
+
+    .mainContainer.active {
+        left: 0;
+    }
+
+    .sideInnerContainer {
+        width: 100%;
+        height: 100%;
+    }
+
+    .backBtn {
+        display: block;
+        padding: 10px;
+        background: #eee;
+        border: none;
+        font-size: 16px;
+        cursor: pointer;
+    }
+}
+
+@media (min-width: 764px) {
+    .backBtn {
+        display: none; 
+    }
+}
+@media(max-width:590px){
+    nav {
+  padding: 1rem;
+}
+nav img{
+    width: 250px;
+    height: 35px;
+}
+.heading{
+padding: 1rem;
+}
+.ProfileDp{
+    width: 45px;
+    height:45px;
+
+}
+.ProfilesDp{
+    width: 45px;
+    height:45px;
+    
+}
+.profilelastMessage{
+    margin-top: 2px;
+    width: 100%;
+    max-width: 240px;
+    font-size: 15px;
+      white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+h2{
+    font-size: 20px;
+}
+h3{
+    font-size: 16px;
+}
+#sendBtn{
+    display: none;
+}
+
+.chats {
+
+    padding: 1rem;}
+.profile{
+
+    padding: 1rem;
+}
+.messageSpace{
+    padding: 1rem;;
+}
+}
